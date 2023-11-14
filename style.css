@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #000000;
+    background-image: linear-gradient(19deg, #000000 0%, rgb(57, 50, 59) 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 62.5%;
+    line-height: 1.7;
+    color: #444;
+    box-sizing: border-box;
+    padding: 2rem 20vw;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 2.4rem;
+}
+.main {
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    padding: 4rem;
+    font-size: 20px;
+}
+
+.number {
+    color: #392633;
+    font-size: 3rem;
+    font-weight: bold;
+    display: inline;
+    margin-right: 1rem;
+    line-height: 100%;
+}
+
+.page {
+    list-style: none;
+    padding: 0;
+}
+
+.page li {
+    margin-bottom: 10px;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+    background-color: white;
+    width: 100%;
+    height: 4rem;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+button {
+    color: #392633;
+    font-weight: bold;
+    background-color: transparent;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.num__btns {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.num__btn {
+    width: 3rem;
+    height: 3rem;
+    margin: .5rem;
+    color: #392633;
+    position: relative;
+    z-index: 2;
+    font-size: 1.4rem;
+    transform: all 1ss;
+}
+.num__btn--active {
+    color: white;
+}
+
+.active__indicator {
+    background-color: #392633;
+    position: absolute;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    top: .5rem;
+    left: .5rem;
+    transition: transform .5s ease-in-out;
+    transform: translateX(0rem);
+}
+
+button:hover {
+    color: #99798f;
+}
+
+button:disabled {
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+
+@media (max-width: 900px) {
+    .num__btns {
+        display: none;
+    }
+    body {
+        padding: 5rem;
+    }
+    .main {
+        padding: 2rem;
+    }
+}
